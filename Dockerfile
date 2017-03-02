@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python
+FROM lsiobase/alpine.python:3.5
 MAINTAINER sparklyballs, ajw107 (Alex Wood)
 
 #make life easy for yourself
@@ -12,8 +12,7 @@ RUN chmod +x /usr/bin/ll
 # cleanup
 RUN rm -rf \
   /root/.cache \
-	/tmp/* \
-	/var/lib/apt/lists/* \
+  /tmp/* \
   /var/tmp/*
 
 # ports and volumes

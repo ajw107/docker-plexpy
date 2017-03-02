@@ -1,13 +1,15 @@
 #!/usr/bin/with-contenv bash
 
 #If variable $ADVANCED_GIT_BRANCH, set branch to $ADVANCED_GIT_BRANCH, otherwise, default to master
-[ "$ADVANCED_GIT_BRANCH" ] && \
-	echo "Using this variable is unsupported., THERE IS NO PATH BACK TO MASTER GIT BRANCH OTHER THAN REMOVING EXISTING APPDATA FOLDER, WE MEAN IT WHEN WE SAY UNSUPPORTED" || \
+if [ -z "$ADVANCED_GIT_BRANCH" ] then
 	ADVANCED_GIT_BRANCH="master"
+else
+	echo "Using this variable is unsupported., THERE IS NO PATH BACK TO MASTER GIT BRANCH OTHER THAN REMOVING EXISTING APPDATA FOLDER, WE MEAN IT WHEN WE SAY UNSUPPORTED" || \
+fi
 
 # install app 
 [[ ! -d "/opt/plexpy/.git" ]] && \
-	git clone --branch $ADVANCED_GIT_BRANCH https://github.com/drzoidberg33/plexpy.git /opt/plexpy
+	git clone --branch $ADVANCED_GIT_BRANCH https://github.com/JonnyWong16/plexpy.git /opt/plexpy
 
 # permissions
 chown -R abc:abc \
