@@ -3,6 +3,7 @@
 #If variable $ADVANCED_GIT_BRANCH, set branch to $ADVANCED_GIT_BRANCH, otherwise, default to master
 if [ -z "$ADVANCED_GIT_BRANCH" ]
 then
+        echo "Using normal master branch"
 	ADVANCED_GIT_BRANCH="master"
 else
 	echo "Using this variable is unsupported., THERE IS NO PATH BACK TO MASTER GIT BRANCH OTHER THAN REMOVING EXISTING APPDATA FOLDER, WE MEAN IT WHEN WE SAY UNSUPPORTED" || \
