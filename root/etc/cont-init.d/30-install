@@ -6,7 +6,7 @@ then
         echo "Using normal master branch"
 	ADVANCED_GIT_BRANCH="master"
 else
-	echo "Using this variable is unsupported., THERE IS NO PATH BACK TO MASTER GIT BRANCH OTHER THAN REMOVING EXISTING APPDATA FOLDER, WE MEAN IT WHEN WE SAY UNSUPPORTED" || \
+	echo "Using this variable is unsupported., THERE IS NO PATH BACK TO MASTER GIT BRANCH OTHER THAN REMOVING EXISTING APPDATA FOLDER, WE MEAN IT WHEN WE SAY UNSUPPORTED"
 fi
 
 # install app 
